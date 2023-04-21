@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Apr 20 18:22:01 2023
+# Process ID: 32600
+# Current directory: D:/Github/SPI_FPGA/SPI_FPGA.runs/synth_1
+# Command line: vivado.exe -log SPI_Master.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SPI_Master.tcl
+# Log file: D:/Github/SPI_FPGA/SPI_FPGA.runs/synth_1/SPI_Master.vds
+# Journal file: D:/Github/SPI_FPGA/SPI_FPGA.runs/synth_1\vivado.jou
+# Running On: LAPTOP-U9EM5UJ6, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16935 MB
+#-----------------------------------------------------------
+source SPI_Master.tcl -notrace
