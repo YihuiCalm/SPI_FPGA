@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1682029319">
-  <File Type="PA-TCL" Name="SPI_Master.tcl"/>
-  <File Type="REPORTS-TCL" Name="SPI_Master_reports.tcl"/>
-  <File Type="RDS-RDS" Name="SPI_Master.vds"/>
-  <File Type="RDS-UTIL" Name="SPI_Master_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="SPI_Master_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="SPI_Master.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1682404857" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SPI_Master.dcp">
+  <File Type="PA-TCL" Name="SPI_Read_Flash.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="SPI_Read_Flash_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="SPI_Read_Flash_reports.tcl"/>
+  <File Type="RDS-RDS" Name="SPI_Read_Flash.vds"/>
+  <File Type="RDS-UTIL" Name="SPI_Read_Flash_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="SPI_Read_Flash_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="SPI_Read_Flash.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SPI_Read_Flash_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="SPI_Read_Flash_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/SPI_Master.v">
@@ -15,9 +18,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../UART_FPGA/UART_echo/UART_echo.srcs/sources_1/new/uart_tx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SPI_Read_Flash.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="SPI_Master"/>
+      <Option Name="TopModule" Val="SPI_Read_Flash"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -30,11 +47,20 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/Arty-A7-35-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/SPI_Master.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

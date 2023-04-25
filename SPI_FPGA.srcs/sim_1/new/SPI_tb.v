@@ -24,43 +24,59 @@ module SPI_tb(
 
     );
     
-    reg clk=0;
-    reg reset=0;
-    reg enable_rx=0;
-    reg enable_tx=0;
-    reg [7:0] data_tx=0;
-    wire miso;
+    reg clk=0, reset=1;
+    reg enable_rx=0, enable_tx=0, miso=0;
+    reg [7:0] data=0, data_tx=0;
     
+    wire tx_done, mosi, sclk, ss, rx_done;
     wire [7:0] data_rx;
-    wire tx_done, rx_done, sclk, mosi, ss;
     
     always #1 clk = ~clk;
     
-    reg [7:0] data;
     initial begin
-        data_tx = 0;
-        data = 0;
-        #50 enable_rx <= 1;
-
-
+        #9
+        enable_tx = 1;
+        reset = 0;
     end
     
-    reg [3:0] counter=0;
+    always @(posedge clk) begin
+        if (tx_done) data <= data + 1;
+        else if (rx_done) data <= data + 1;
+        else data <= data;
+    end
+    
     always @(negedge clk) begin
-        if (counter==4'd7) begin
-            counter <= 0;
-            data <= data_tx;
-            data_tx <= data_tx + 1;
+        if (tx_done) begin
+            enable_rx <= 1;
+            enable_tx <= 0;
         end
-        else if (~ss) begin
-            counter <= counter + 1;
-            data <= data << 1;
+        else if (rx_done) begin
+            enable_rx <= 0;
+            enable_tx <= 1;
         end
     end
-
-    assign miso = data[7];  
     
-   SPI_Master inst(
+    always @(posedge clk) begin
+     if (enable_tx) data_tx <= data;
+     else data_tx <= 0;
+    end
+    
+    
+    reg [7:0] tb_counter=0;
+    always @(posedge clk) begin
+        if (enable_rx) begin
+            if (tb_counter==8'd16) tb_counter <= 0;
+            else tb_counter <= tb_counter + 1;
+            miso <= data[7-(tb_counter)/2];
+        end
+        else begin
+            tb_counter <= 0;
+            miso <= 0;
+        end
+    end
+    
+    
+    SPI_Master inst(
     .clk(clk),
     .reset(reset),
     .enable_rx(enable_rx),

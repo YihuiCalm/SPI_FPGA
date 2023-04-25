@@ -3,5 +3,8 @@
 Oct 19 2021
 03:16:22
 D:/Github/SPI_FPGA/SPI_FPGA.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
-D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_tb.v,1682067362,verilog,,,,SPI_tb,,,,,,,,
-D:/Github/SPI_FPGA/SPI_FPGA.srcs/sources_1/new/SPI_Master.v,1682067479,verilog,,D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_tb.v,,SPI_Master,,,,,,,,
+D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_Flash_read_tb.v,1682377185,verilog,,,,SPI_Flash_read_tb,,,,,,,,
+D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_tb.v,1682315255,verilog,,,,SPI_tb,,,,,,,,
+D:/Github/SPI_FPGA/SPI_FPGA.srcs/sources_1/new/SPI_Master.v,1682376658,verilog,,D:/Github/SPI_FPGA/SPI_FPGA.srcs/sources_1/new/SPI_Read_Flash.v,,SPI_Master,,,,,,,,
+D:/Github/SPI_FPGA/SPI_FPGA.srcs/sources_1/new/SPI_Read_Flash.v,1682398511,verilog,,D:/Github/UART_FPGA/UART_echo/UART_echo.srcs/sources_1/new/uart_tx.v,,SPI_Read_Flash,,,,,,,,
+D:/Github/UART_FPGA/UART_echo/UART_echo.srcs/sources_1/new/uart_tx.v,1681967200,verilog,,D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_Flash_read_tb.v,,uart_tx,,,,,,,,

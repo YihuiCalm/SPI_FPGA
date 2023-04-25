@@ -47,76 +47,68 @@ module SPI_Master(
     always @(*) begin
         case (state)
             idle: next = enable_rx? receive: (enable_tx? transmit: idle);
-            receive: next = rx_done? (enable_rx? receive: (enable_tx? transmit: idle)): receive;
-            transmit : next = tx_done? (enable_tx? transmit: (enable_rx? receive: idle)): transmit;
+            receive: next = rx_done? (enable_tx? transmit: (enable_rx? receive: idle)): receive;
+            transmit : next = tx_done? (enable_rx? receive: (enable_tx? transmit: idle)): transmit;
         endcase
     end
     
     // State transition.
-    always @(negedge clk, posedge reset) begin
+    always @(posedge clk, posedge reset) begin
         if (reset) state <= idle;
         else state <= next;
     end
     
     // Chip select.
-    assign ss = ~|state[2:1];
+    assign ss = ~(state == transmit | state == receive);
     
-    // Transmit data counter.
-    reg [4:0] tx_counter = 0;
-    always @(negedge clk, posedge reset) begin
-        if (reset) tx_counter <= 0;
-        else if (state == transmit) begin
-            if (tx_counter == 4'd7) begin
-                tx_counter <= 0;
+    // Data counter.
+    reg [4:0] counter = 0;
+    always @(posedge clk, posedge reset) begin
+        if (reset) counter <= 0;
+        else if (state == transmit | state == receive) begin
+            if (counter == 4'd15) begin
+                counter <= 0;
             end
             else begin
-                tx_counter <= tx_counter + 4'd1;
+                counter <= counter + 4'd1;
             end
         end
         else begin
-            tx_counter <= 4'b0;
+            counter <= 4'b0;
         end
     end
-    assign tx_done = tx_counter==4'd7;
+    
+    assign tx_done = counter==4'd15 & state==transmit;
+    assign rx_done = counter==4'd15 & state==receive;
+    
+    
     
     // Transmit data output.
-    assign mosi = data_tx[7-tx_counter];
-    
-    // Receive data counter.
-    reg [4:0] rx_counter = 0;
-    always @(posedge clk, posedge reset) begin
-        if (reset) tx_counter <= 0;
-        else if (state == receive) begin
-            if (rx_counter == 4'd7) begin
-                rx_counter <= 0;
-            end
-            else begin
-                rx_counter <= rx_counter + 4'd1;
-            end
-        end
-        else begin
-            rx_counter <= 4'b0;
-        end
-    end
-    assign rx_done = rx_counter==4'd7;
-    
+    assign mosi = data_tx[7-counter/2];
+
     // Receive data organize.
     reg [7:0] rx_data_reg = 0;
     always @(posedge clk, posedge reset) begin
         if (reset) rx_data_reg <= 8'd0;
-        else if (rx_counter==4'd7) rx_data_reg <= 0;
-        else rx_data_reg[7-rx_counter] <= miso;
+        else if (state==receive) begin
+            if (counter==0) rx_data_reg <= {miso, 7'd0};
+            else if (counter[0]==1'b0) begin
+                rx_data_reg[7-counter/2] <= miso;
+            end
+            else rx_data_reg <= rx_data_reg;
+        end
+        else rx_data_reg <= 0;
     end
     
     // Receive data output.
-    always @(posedge clk, posedge reset) begin
-        if (reset) data_rx <= 8'd0;
-        else if (rx_counter==4'd7) data_rx <= rx_data_reg;
-        else data_rx <= data_rx;
-    end
-
+//    always @(posedge clk, posedge reset) begin
+//        if (reset) data_rx <= 8'd0;
+//        else if (rx_done) data_rx <= rx_data_reg;
+//        else data_rx <= data_rx;
+//    end
+    always @(*) data_rx = rx_data_reg;
     // SCLK generation.
-    assign sclk = |state[2:1]? clk: 1'b0;
+    assign sclk = counter[0];
 
     
 endmodule
