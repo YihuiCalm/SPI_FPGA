@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Fri Apr 21 15:45:19 2023
-# Process ID: 21148
+# Start of session at: Tue Apr 25 03:01:47 2023
+# Process ID: 23016
 # Current directory: D:/Github/SPI_FPGA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15344 D:\Github\SPI_FPGA\SPI_FPGA.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5864 D:\Github\SPI_FPGA\SPI_FPGA.xpr
 # Log file: D:/Github/SPI_FPGA/vivado.log
 # Journal file: D:/Github/SPI_FPGA\vivado.jou
 # Running On: LAPTOP-U9EM5UJ6, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16935 MB
@@ -13,59 +13,3 @@
 start_gui
 open_project D:/Github/SPI_FPGA/SPI_FPGA.xpr
 update_compile_order -fileset sources_1
-launch_simulation
-source SPI_tb.tcl
-current_wave_config {Untitled 1}
-add_wave {{/SPI_tb/inst/rx_data_reg}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/SPI_tb/inst/rx_counter}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/SPI_tb/inst/tx_counter}} 
-relaunch_sim
-close_sim
-launch_simulation
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-reset_run synth_1
-launch_simulation
-launch_simulation
-source SPI_tb.tcl
-close_sim
-launch_simulation
-source SPI_tb.tcl
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 3}
-add_wave {{/SPI_tb/inst/counter}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 3}
-add_wave {{/SPI_tb/inst/data_tx_reg}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
