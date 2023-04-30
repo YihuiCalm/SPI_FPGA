@@ -9,33 +9,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,025"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomStartTime time="505"></ZoomStartTime>
+      <ZoomEndTime time="621"></ZoomEndTime>
+      <Cursor1Time time="512"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="246"></NameColumnWidth>
-      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="5" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="btn_IBUF" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">btn_IBUF[1:1]</obj_property>
-      <obj_property name="ObjectShortName">btn_IBUF[1:1]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="qspi_miso_IBUF" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">qspi_miso_IBUF</obj_property>
-      <obj_property name="ObjectShortName">qspi_miso_IBUF</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="qspi_mosi_OBUF" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">qspi_mosi_OBUF</obj_property>
@@ -56,66 +40,22 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">qspi_cs_OBUF</obj_property>
       <obj_property name="ObjectShortName">qspi_cs_OBUF</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="vbus24" type="vbus">
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="inst_uart/tx_data_reg_n_0_" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">inst_uart/tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="ObjectShortName">tx_data_reg_n_0_[1:1]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
+   <wvobject fp_name="qspi_miso_IBUF" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">qspi_miso_IBUF</obj_property>
+      <obj_property name="ObjectShortName">qspi_miso_IBUF</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="respond_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">respond_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">respond_data[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
 </wave_config>

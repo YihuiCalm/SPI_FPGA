@@ -27,15 +27,16 @@ module SPI_Master(
     input enable_tx,
     input [7:0] data_tx,
     output reg [7:0] data_rx = 0,
-    output tx_done,
-    output rx_done,
+    output reg tx_done = 0,
+    output reg rx_done = 0,
     
     input miso,
-    output sclk,
-    output mosi,
-    output ss
+    output reg sclk = 0,
+    output reg mosi = 0,
+    output reg ss = 1
     );
-
+    
+    reg [3:0] counter = 0;
 
     parameter idle = 3'b001;
     parameter transmit = 3'b010;
@@ -47,8 +48,8 @@ module SPI_Master(
     always @(*) begin
         case (state)
             idle: next = enable_rx? receive: (enable_tx? transmit: idle);
-            receive: next = rx_done? (enable_tx? transmit: (enable_rx? receive: idle)): receive;
-            transmit : next = tx_done? (enable_rx? receive: (enable_tx? transmit: idle)): transmit;
+            receive: next = (counter==4'd15)? (enable_tx? transmit: (enable_rx? receive: idle)): receive;
+            transmit: next = (counter==4'd15)? (enable_rx? receive: (enable_tx? transmit: idle)): transmit;
         endcase
     end
     
@@ -59,10 +60,14 @@ module SPI_Master(
     end
     
     // Chip select.
-    assign ss = ~(state == transmit | state == receive);
+    always @(posedge clk, posedge reset) begin
+    	if (reset) ss <= 1;
+    	else if (next==transmit | next==receive) ss <= 0;
+    	else ss <= 1;
+    end
     
     // Data counter.
-    reg [4:0] counter = 0;
+
     always @(posedge clk, posedge reset) begin
         if (reset) counter <= 0;
         else if (state == transmit | state == receive) begin
@@ -78,13 +83,21 @@ module SPI_Master(
         end
     end
     
-    assign tx_done = counter==4'd15 & state==transmit;
-    assign rx_done = counter==4'd15 & state==receive;
+    always @(posedge clk, posedge reset) begin
+    	if (reset) {rx_done,tx_done} <= 2'b00;
+    	else if (counter==4'd13&state[1]) {rx_done, tx_done} <= 2'b01;
+    	else if (counter==4'd14&state[2]) {rx_done, tx_done} <= 2'b10;
+    	else {rx_done, tx_done} <= 2'b00;
+    end
     
     
     
     // Transmit data output.
-    assign mosi = data_tx[7-counter/2];
+    always @(posedge clk, posedge reset) begin
+    	if (reset) mosi <= 0;
+    	else if (next==transmit) mosi <= data_tx[7-(counter+1)/2];
+    	else mosi <= 0;
+    end
 
     // Receive data organize.
     reg [7:0] rx_data_reg = 0;
@@ -92,7 +105,7 @@ module SPI_Master(
         if (reset) rx_data_reg <= 8'd0;
         else if (state==receive) begin
             if (counter==0) rx_data_reg <= {miso, 7'd0};
-            else if (counter[0]==1'b0) begin
+            else if (~counter[0]) begin
                 rx_data_reg[7-counter/2] <= miso;
             end
             else rx_data_reg <= rx_data_reg;
@@ -100,15 +113,19 @@ module SPI_Master(
         else rx_data_reg <= 0;
     end
     
-    // Receive data output.
-//    always @(posedge clk, posedge reset) begin
-//        if (reset) data_rx <= 8'd0;
-//        else if (rx_done) data_rx <= rx_data_reg;
-//        else data_rx <= data_rx;
-//    end
-    always @(*) data_rx = rx_data_reg;
+    always begin
+    	data_rx = rx_data_reg;
+    end
+    
     // SCLK generation.
-    assign sclk = counter[0];
+    always @(posedge clk, posedge reset) begin
+    	if (reset) sclk <= 0;
+    	else if (state == transmit | state == receive) begin
+    		if (~counter[0]) sclk <= 1;
+    		else sclk <= 0;
+    	end
+    	else sclk <= 0;
+    end
 
     
 endmodule

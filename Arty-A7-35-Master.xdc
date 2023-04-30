@@ -217,20 +217,14 @@ set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVCMOS33} [get_ports qspi_sck]
 #set_property -dict { PACKAGE_PIN A15   IOSTANDARD LVCMOS33     } [get_ports { isns0v95_p }]; #IO_L8P_T1_AD10P_15 Sch=ad_p[10]
 
 
-set_property MARK_DEBUG true [get_nets {btn_IBUF[1]}]
-set_property MARK_DEBUG true [get_nets qspi_miso_IBUF]
-set_property MARK_DEBUG true [get_nets qspi_mosi_OBUF]
-set_property MARK_DEBUG true [get_nets qspi_sck_OBUF]
 
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[3]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[4]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[6]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[7]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[9]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[1]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[2]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[5]}]
-set_property MARK_DEBUG true [get_nets {inst_uart/tx_data_reg_n_0_[8]}]
+
+
+
+
+
+
+
 
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
@@ -242,63 +236,31 @@ set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
 set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
 set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
 set_property port_width 1 [get_debug_ports u_ila_0/clk]
-connect_debug_port u_ila_0/clk [get_nets [list CLK100MHZ_IBUF_BUFG]]
+connect_debug_port u_ila_0/clk [get_nets [list clk_BUFG]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 1 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {btn_IBUF[1]}]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {inst_uart/tx_data[1]} {inst_uart/tx_data[2]} {inst_uart/tx_data[3]} {inst_uart/tx_data[4]} {inst_uart/tx_data[5]} {inst_uart/tx_data[6]} {inst_uart/tx_data[7]} {inst_uart/tx_data[8]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 1 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list qspi_cs_OBUF]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {respond_data[0]} {respond_data[1]} {respond_data[2]} {respond_data[3]} {respond_data[4]} {respond_data[5]} {respond_data[6]} {respond_data[7]} {respond_data[8]} {respond_data[9]} {respond_data[10]} {respond_data[11]} {respond_data[12]} {respond_data[13]} {respond_data[14]} {respond_data[15]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
 set_property port_width 1 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list qspi_miso_IBUF]]
+connect_debug_port u_ila_0/probe2 [get_nets [list qspi_cs_OBUF]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
 set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list qspi_mosi_OBUF]]
+connect_debug_port u_ila_0/probe3 [get_nets [list qspi_miso_IBUF]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
 set_property port_width 1 [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list qspi_sck_OBUF]]
+connect_debug_port u_ila_0/probe4 [get_nets [list qspi_mosi_OBUF]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
 set_property port_width 1 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list {inst_uart/tx_data_reg_n_0_[1]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
-set_property port_width 1 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list {inst_uart/tx_data_reg_n_0_[2]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
-set_property port_width 1 [get_debug_ports u_ila_0/probe7]
-connect_debug_port u_ila_0/probe7 [get_nets [list {inst_uart/tx_data_reg_n_0_[3]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
-set_property port_width 1 [get_debug_ports u_ila_0/probe8]
-connect_debug_port u_ila_0/probe8 [get_nets [list {inst_uart/tx_data_reg_n_0_[4]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
-set_property port_width 1 [get_debug_ports u_ila_0/probe9]
-connect_debug_port u_ila_0/probe9 [get_nets [list {inst_uart/tx_data_reg_n_0_[5]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
-set_property port_width 1 [get_debug_ports u_ila_0/probe10]
-connect_debug_port u_ila_0/probe10 [get_nets [list {inst_uart/tx_data_reg_n_0_[6]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
-set_property port_width 1 [get_debug_ports u_ila_0/probe11]
-connect_debug_port u_ila_0/probe11 [get_nets [list {inst_uart/tx_data_reg_n_0_[7]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
-set_property port_width 1 [get_debug_ports u_ila_0/probe12]
-connect_debug_port u_ila_0/probe12 [get_nets [list {inst_uart/tx_data_reg_n_0_[8]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
-set_property port_width 1 [get_debug_ports u_ila_0/probe13]
-connect_debug_port u_ila_0/probe13 [get_nets [list {inst_uart/tx_data_reg_n_0_[9]}]]
+connect_debug_port u_ila_0/probe5 [get_nets [list qspi_sck_OBUF]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-connect_debug_port dbg_hub/clk [get_nets CLK100MHZ_IBUF_BUFG]
+connect_debug_port dbg_hub/clk [get_nets clk_BUFG]

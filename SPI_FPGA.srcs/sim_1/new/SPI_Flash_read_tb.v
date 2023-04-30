@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 100ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -25,14 +25,13 @@ module SPI_Flash_read_tb(
     );
     
     reg clk=0, reset=1, start=0, miso=0;
-    wire sck, cs, mosi, respond_done;
+    wire sck, cs, mosi;
     
     always #1 clk = ~clk;
-    
+    always #7 miso = ~miso;
     initial begin
         #5 reset = 0;
         #5 start = 1;
-        miso = 1;
         #250 start = 1;
     end
     

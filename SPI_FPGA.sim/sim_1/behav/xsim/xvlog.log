@@ -1,9 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/SPI_FPGA/SPI_FPGA.srcs/sources_1/new/SPI_Master.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SPI_Master
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/SPI_FPGA/SPI_FPGA.srcs/sources_1/new/SPI_Read_Flash.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SPI_Read_Flash
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/UART_FPGA/UART_echo/UART_echo.srcs/sources_1/new/uart_tx.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module uart_tx
-WARNING: [VRFC 10-3380] identifier 'idle' is used before its declaration [D:/Github/UART_FPGA/UART_echo/UART_echo.srcs/sources_1/new/uart_tx.v:31]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_Flash_read_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SPI_Flash_read_tb

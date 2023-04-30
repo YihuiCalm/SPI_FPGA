@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+D:/Github/SPI_FPGA/SPI_FPGA.sim/sim_1/impl/timing/xsim/SPI_Flash_read_tb_time_impl.v,1682853921,verilog,,D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_Flash_read_tb.v,,SPI_Master;SPI_Read_Flash;glbl;uart_tx,,,,,,,,
+D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_Flash_read_tb.v,1682627666,verilog,,,,SPI_Flash_read_tb,,,,,,,,
+D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_tb.v,1682315255,verilog,,,,SPI_tb,,,,,,,,

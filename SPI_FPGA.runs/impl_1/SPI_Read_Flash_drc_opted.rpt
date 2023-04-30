@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Apr 25 02:36:47 2023
+| Date         : Sun Apr 30 08:13:32 2023
 | Host         : LAPTOP-U9EM5UJ6 running 64-bit major release  (build 9200)
 | Command      : report_drc -file SPI_Read_Flash_drc_opted.rpt -pb SPI_Read_Flash_drc_opted.pb -rpx SPI_Read_Flash_drc_opted.rpx
 | Design       : SPI_Read_Flash

@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Apr 25 02:34:42 2023
-# Process ID: 13936
+# Start of session at: Sun Apr 30 08:12:49 2023
+# Process ID: 29552
 # Current directory: D:/Github/SPI_FPGA/SPI_FPGA.runs/impl_1
 # Command line: vivado.exe -log SPI_Read_Flash.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SPI_Read_Flash.tcl -notrace
 # Log file: D:/Github/SPI_FPGA/SPI_FPGA.runs/impl_1/SPI_Read_Flash.vdi
 # Journal file: D:/Github/SPI_FPGA/SPI_FPGA.runs/impl_1\vivado.jou
-# Running On: LAPTOP-U9EM5UJ6, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 16935 MB
+# Running On: LAPTOP-U9EM5UJ6, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 17023 MB
 #-----------------------------------------------------------
 source SPI_Read_Flash.tcl -notrace

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SPI_Flash_read_tb_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="SPI_Flash_read_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="20.001000001 ms"></ZoomEndTime>
+      <Cursor1Time time="11.434935631 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="260"></NameColumnWidth>
+      <ValueColumnWidth column_width="109"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/SPI_Flash_read_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/miso" type="logic">
+      <obj_property name="ElementShortName">miso</obj_property>
+      <obj_property name="ObjectShortName">miso</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/sck" type="logic">
+      <obj_property name="ElementShortName">sck</obj_property>
+      <obj_property name="ObjectShortName">sck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/cs" type="logic">
+      <obj_property name="ElementShortName">cs</obj_property>
+      <obj_property name="ObjectShortName">cs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/mosi" type="logic">
+      <obj_property name="ElementShortName">mosi</obj_property>
+      <obj_property name="ObjectShortName">mosi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus69" type="vbus">
+      <obj_property name="label">spi_counter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/counter[3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/counter[2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/counter[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="VirtualBus" type="vbus">
+      <obj_property name="label">spi_state</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Reversed">true</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\state_reg_n_0_[0] " type="logic">
+         <obj_property name="ElementShortName">\state_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\state_reg_n_0_[0] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/state_reg[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/state_reg[2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus804" type="vbus">
+      <obj_property name="label">spi_rx_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[0] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[0] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[1] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[1] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[1] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[2] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[2] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[2] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[3] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[3] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[3] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[4] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[4] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[4] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[5] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[5] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[5] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[6] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[6] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[6] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/\rx_data_reg_reg_n_0_[7] " type="logic">
+         <obj_property name="ElementShortName">\rx_data_reg_reg_n_0_[7] </obj_property>
+         <obj_property name="ObjectShortName">\rx_data_reg_reg_n_0_[7] </obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/tx_done" type="logic">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_spi/rx_done" type="logic">
+      <obj_property name="ElementShortName">rx_done</obj_property>
+      <obj_property name="ObjectShortName">rx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/enable_tx" type="logic">
+      <obj_property name="ElementShortName">enable_tx</obj_property>
+      <obj_property name="ObjectShortName">enable_tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/enable_rx_reg_n_0" type="logic">
+      <obj_property name="ElementShortName">enable_rx_reg_n_0</obj_property>
+      <obj_property name="ObjectShortName">enable_rx_reg_n_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/baudrate_pulse" type="logic">
+      <obj_property name="ElementShortName">baudrate_pulse</obj_property>
+      <obj_property name="ObjectShortName">baudrate_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus508" type="vbus">
+      <obj_property name="label">uart_state</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/state_reg[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/\state_reg_n_0_[0] " type="logic">
+         <obj_property name="ElementShortName">\state_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\state_reg_n_0_[0] </obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="VirtualBus" type="vbus">
+      <obj_property name="label">uart_counter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Reversed">true</obj_property>
+      <obj_property name="ElementShortName">VirtualBus[]</obj_property>
+      <obj_property name="ObjectShortName">VirtualBus[]</obj_property>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/\counter_reg_n_0_[0] " type="logic">
+         <obj_property name="ElementShortName">\counter_reg_n_0_[0] </obj_property>
+         <obj_property name="ObjectShortName">\counter_reg_n_0_[0] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/\counter_reg_n_0_[1] " type="logic">
+         <obj_property name="ElementShortName">\counter_reg_n_0_[1] </obj_property>
+         <obj_property name="ObjectShortName">\counter_reg_n_0_[1] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/\counter_reg_n_0_[2] " type="logic">
+         <obj_property name="ElementShortName">\counter_reg_n_0_[2] </obj_property>
+         <obj_property name="ObjectShortName">\counter_reg_n_0_[2] </obj_property>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/\counter_reg_n_0_[3] " type="logic">
+         <obj_property name="ElementShortName">\counter_reg_n_0_[3] </obj_property>
+         <obj_property name="ObjectShortName">\counter_reg_n_0_[3] </obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/enable_uart" type="logic">
+      <obj_property name="ElementShortName">enable_uart</obj_property>
+      <obj_property name="ObjectShortName">enable_uart</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SPI_Flash_read_tb/inst/respond_data" type="array">
+      <obj_property name="ElementShortName">respond_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">respond_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus780" type="vbus">
+      <obj_property name="label">uart_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[9]" type="logic">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus805" type="vbus">
+         <obj_property name="label">data</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/SPI_Flash_read_tb/inst/inst_uart/tx_data_0[0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

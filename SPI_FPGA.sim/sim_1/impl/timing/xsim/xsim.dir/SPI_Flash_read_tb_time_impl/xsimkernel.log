@@ -1,0 +1,7 @@
+Running: xsim.dir/SPI_Flash_read_tb_time_impl/xsimk.exe -simmode gui -wdb SPI_Flash_read_tb_time_impl.wdb -simrunnum 0 -socket 6581
+Design successfully loaded
+Design Loading Memory Usage: 15984 KB (Peak: 15984 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 20980 KB (Peak: 20980 KB)
+Simulation CPU Usage: 9280 ms

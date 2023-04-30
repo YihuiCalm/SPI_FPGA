@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+WARNING: "C:/Xilinx/Vivado/2021.2/data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /SPI_Flash_read_tb/inst/inst_spi/next_reg[1]/TChk163_1983 at time 105710335 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:/Xilinx/Vivado/2021.2/data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /SPI_Flash_read_tb/inst/inst_uart/next_reg[0]/TChk163_1983 at time 6441710281 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:/Xilinx/Vivado/2021.2/data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /SPI_Flash_read_tb/inst/inst_uart/next_reg[1]/TChk163_1983 at time 6442510269 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 
+WARNING: "C:/Xilinx/Vivado/2021.2/data/verilog/src/unisims/LDCE.v" Line 163: Timing violation in scope /SPI_Flash_read_tb/inst/inst_uart/next_reg[0]/TChk163_1983 at time 6442510281 ps $setuphold (posedge G,negedge D,(0:0:0),(0:0:0),notifier,in_clk_enable_p,in_clk_enable_p,G_dly,D_dly) 

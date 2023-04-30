@@ -1,8 +1,14 @@
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SPI_Flash_read_tb_behav xil_defaultlib.SPI_Flash_read_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 32 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot SPI_tb_behav xil_defaultlib.SPI_tb xil_defaultlib.glbl -log elaborate.log 
 Using 32 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'respond_done' on this module [D:/Github/SPI_FPGA/SPI_FPGA.srcs/sim_1/new/SPI_Flash_read_tb.v:53]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.SPI_Master
+Compiling module xil_defaultlib.SPI_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SPI_tb_behav
